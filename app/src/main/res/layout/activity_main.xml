@@ -5,82 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
+    android:id="@+id/layout"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/main_image"
         android:src="@drawable/login_vector"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/_280sdp"
         />
 
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:id="@+id/main_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_image"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/artifika"
         android:text="Welcome Back!"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        style="@style/text_white_bold_18" />
 
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:id="@+id/main_please_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_welcome"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/artifika"
-        android:text="Please Log into your existing account"
-        android:textColor="@color/white_transparent_70"
-        android:textSize="16dp"
+        android:text="@string/quote"
+        style="@style/text_white_trans_16"
         />
 
     <EditText
-        android:padding="15dp"
+        style="@style/edit_white_trans"
         android:background="@drawable/custom_border"
-        android:fontFamily="@font/artifika"
         android:id="@+id/main_email"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/white_transparent_70"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white_transparent_80"
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
         android:layout_below="@id/main_please_login"
-        android:hint="Your Email"
-        android:textSize="18dp"
+        android:hint="@string/email"
+
         />
     <EditText
-        android:padding="15dp"
-        android:background="@drawable/custom_border"
-        android:fontFamily="@font/artifika"
         android:id="@+id/main_password"
         android:inputType="textPassword"
-        android:textColorHint="@color/white_transparent_70"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white_transparent_80"
-        android:layout_marginTop="15dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_below="@id/main_email"
-        android:hint="Your Password"
-        android:textSize="18dp"
+        android:hint="@string/password"
+        style="@style/edit_white_trans"
         />
     <Button
-        android:backgroundTint="@color/green"
-        android:fontFamily="@font/artifika"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
+        android:id="@+id/main_button"
+        style="@style/button_green_bold_16"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/main_password"
-        android:text="Login"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:text="@string/login"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/main_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_button"
+        android:layout_centerHorizontal="true"
+        android:text="@string/create_account"
+        style="@style/text_white_bold_18" />
+
 </RelativeLayout>
